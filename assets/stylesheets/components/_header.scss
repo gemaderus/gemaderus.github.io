@@ -2,9 +2,9 @@
   background-color: $main-color;
   position: relative;
 
-  @media screen and (min-width: $desktop) {
-    border-bottom: 0;
-  }
+  // @media screen and (min-width: $desktop) {
+  //   border-bottom: 0;
+  // }
 
   @media print {
     display: none;
@@ -58,6 +58,20 @@
 
   .Navigation, .Button--close {
     display: flex;
+  }
+
+  .Navigation {
+    flex-direction: column;
+    height: calc(100vh - 126px);
+
+    @media screen and (min-width: $tablet) {
+      height: calc(100vh - 226px);
+    }
+
+  }
+
+  .Menu-social {
+    padding: 50px;
   }
 
   .Button--close {

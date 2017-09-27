@@ -844,16 +844,6 @@ Base button to normalize behaviour. It renders the same for links, buttons or in
   .Footer-content span {
     color: #ffffff; }
 
-.Footer-social {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 30px; }
-  .Footer-social li {
-    margin-right: 55px; }
-    .Footer-social li:last-child {
-      margin-right: 0; }
-
 /*
 
 Icons
@@ -883,9 +873,6 @@ Icons classes built on sprites or svg. Use the i tag as acronym of icon. Hilario
 .Header {
   background-color: #FB4747;
   position: relative; }
-  @media screen and (min-width: 800px) {
-    .Header {
-      border-bottom: 0; } }
   @media print {
     .Header {
       display: none; } }
@@ -919,6 +906,14 @@ Icons classes built on sprites or svg. Use the i tag as acronym of icon. Hilario
 
 .is-open .Navigation, .is-open .Button--close {
   display: flex; }
+.is-open .Navigation {
+  flex-direction: column;
+  height: calc(100vh - 126px); }
+  @media screen and (min-width: 600px) {
+    .is-open .Navigation {
+      height: calc(100vh - 226px); } }
+.is-open .Menu-social {
+  padding: 50px; }
 @media screen and (min-width: 800px) {
   .is-open .Button--close {
     display: none; } }
@@ -926,6 +921,7 @@ Icons classes built on sprites or svg. Use the i tag as acronym of icon. Hilario
   display: none; }
 
 .Navigation {
+  background-color: #FB4747;
   display: none;
   left: 0;
   position: absolute;
@@ -938,22 +934,23 @@ Icons classes built on sprites or svg. Use the i tag as acronym of icon. Hilario
       position: static;
       width: auto;
       flex: 1; } }
+  @media screen and (min-width: 800px) {
+    .Navigation .Menu-social {
+      display: none; } }
 
 .Navigation-items {
   background-color: #FB4747;
   display: flex;
   flex-direction: column;
   line-height: normal;
-  width: 100%; }
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 100%; }
   .Navigation-items li {
-    border-bottom: 1px solid #ffffff;
     transition: background 0.3s ease; }
-    .Navigation-items li:first-child {
-      border-top: 1px solid #ffffff; }
     .Navigation-items li:last-child {
       margin-right: 0; }
-    .Navigation-items li:hover {
-      background-color: #ffffff; }
   @media screen and (min-width: 800px) {
     .Navigation-items {
       flex-direction: row;
@@ -971,20 +968,18 @@ Icons classes built on sprites or svg. Use the i tag as acronym of icon. Hilario
 .Navigation-link {
   color: #ffffff;
   display: block;
-  font-size: 18px;
+  font-size: 30px;
   padding: 20px;
   transition: color 0.3s ease;
   width: 100%; }
   .Navigation-link:hover {
-    color: #FB4747;
+    overflow-x: hidden;
+    box-shadow: 0 1px 0 0 #ffffff;
     text-decoration: none; }
   @media screen and (min-width: 800px) {
     .Navigation-link {
-      padding: 0; }
-      .Navigation-link:hover {
-        color: #ffffff; }
-      .Navigation-link:hover {
-        text-decoration: underline; } }
+      font-size: 18px;
+      padding: 0; } }
 
 .Grid-content {
   margin-left: -10px;
@@ -1123,7 +1118,8 @@ Icons classes built on sprites or svg. Use the i tag as acronym of icon. Hilario
   .Logo-company:last-child {
     margin-bottom: 0; }
   .Logo-company a {
-    display: block; }
+    display: block;
+    line-height: 0; }
   @media screen and (min-width: 800px) {
     .Logo-company {
       margin-bottom: 0; } }
@@ -1133,6 +1129,38 @@ Icons classes built on sprites or svg. Use the i tag as acronym of icon. Hilario
   height: 57px;
   padding-left: 10px;
   padding-right: 10px; }
+
+.Menu-social {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px; }
+  .Menu-social li {
+    margin-right: 55px; }
+    .Menu-social li:last-child {
+      margin-right: 0; }
+
+.Cookies-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background: #333;
+  background: rgba(0, 0, 0, 0.8);
+  line-height: 1.2em;
+  color: #eee;
+  text-align: center;
+  padding: 10px 0; }
+  .Cookies-bar .Container {
+    padding: 2rem 4rem; }
+  .Cookies-bar p {
+    margin-bottom: 2rem; }
+
+.Button--cookies {
+  background-color: #FB4747;
+  padding: 1rem 2rem;
+  border-radius: 20px; }
 
 /* 6. Layout */
 .About {

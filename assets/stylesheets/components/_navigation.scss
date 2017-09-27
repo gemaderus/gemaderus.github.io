@@ -16,6 +16,7 @@
 // </nav>
 
 .Navigation {
+  background-color: #FB4747;
   display: none;
   left: 0;
   position: absolute;
@@ -29,6 +30,12 @@
     width: auto;
     flex: 1;
   }
+
+  .Menu-social {
+    @media screen and (min-width: $desktop) {
+      display: none;
+    }
+  }
 }
 
 .Navigation-items {
@@ -37,21 +44,20 @@
   flex-direction: column;
   line-height: normal;
   width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 
   li {
-    border-bottom: 1px solid $white;
+    // border-bottom: 1px solid $white;
     transition: background 0.3s ease;
 
-    &:first-child {
-      border-top: 1px solid $white;
-    }
+    // &:first-child {
+    //   border-top: 1px solid $white;
+    // }
 
     &:last-child {
       margin-right: 0;
-    }
-
-    &:hover {
-      background-color: $white;
     }
   }
 
@@ -78,25 +84,19 @@
 .Navigation-link {
   color: $white;
   display: block;
-  font-size: 18px;
+  font-size: 30px;
   padding: 20px;
   transition: color 0.3s ease;
   width: 100%;
 
   &:hover {
-    color: $main-color;
+    overflow-x: hidden;
+    box-shadow: 0 1px 0 0 $white;
     text-decoration: none;
   }
 
   @media screen and (min-width: $desktop) {
+    font-size: 18px;
     padding: 0;
-
-    &:hover {
-    color: $white;
-  }
-
-    &:hover {
-      text-decoration: underline;
-    }
   }
 }

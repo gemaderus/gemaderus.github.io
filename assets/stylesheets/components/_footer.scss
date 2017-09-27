@@ -13,18 +13,3 @@
     color: $white;
   }
 }
-
-.Footer-social {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
-
-  li {
-    margin-right: 55px;
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-}
