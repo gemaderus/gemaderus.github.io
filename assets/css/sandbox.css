@@ -763,7 +763,7 @@ Reset default styles on paragraphs.
 p {
   margin: 0;
   font-size: 1.6rem;
-  line-height: 1.3; }
+  line-height: 1.5; }
 
 /* 5. Components */
 .Avatar {
@@ -1160,6 +1160,65 @@ Icons classes built on sprites or svg. Use the i tag as acronym of icon. Hilario
   background-color: #FB4747;
   border-radius: 20px;
   padding: 1rem 2rem; }
+
+/*
+
+Media object
+-----------
+
+Media object with flexbox
+
+*/
+.Media {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem; }
+  @media screen and (min-width: 800px) {
+    .Media {
+      align-items: center;
+      flex-direction: row; } }
+
+@media screen and (min-width: 800px) {
+  .Media--reverse .Media-image {
+    margin-left: 0;
+    margin-right: 3rem;
+    order: 1; } }
+@media screen and (min-width: 800px) {
+  .Media--reverse .Media-body {
+    order: 2; } }
+
+.Media-image {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 30rem;
+  width: 100%; }
+  @media screen and (min-width: 800px) {
+    .Media-image {
+      flex: 50%;
+      margin-left: 3rem; } }
+
+.Media-image--wikipedia {
+  background-image: url(../images/wikipedia-app.jpg); }
+
+.Media-image--twitch {
+  background-image: url(../images/twitch-app.jpg); }
+
+.Media-image--pomodoro {
+  background-image: url(../images/pomodoro.jpg); }
+
+.Media-image--calculator {
+  background-image: url(../images/calculator.jpg); }
+
+.Media-body {
+  width: 100%;
+  margin-bottom: 3rem; }
+  .Media-body h3 {
+    margin-bottom: 2rem; }
+  @media screen and (min-width: 800px) {
+    .Media-body {
+      flex: 50%;
+      margin-bottom: 0; } }
 
 /* 6. Layout */
 .About {
