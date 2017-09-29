@@ -1,27 +1,24 @@
 .Cookies-bar {
-  position: fixed;
+  background: rgba(0,0,0,0.8);
   bottom: 0;
+  color: #eee;
+  font-size: 1.4rem;
   left: 0;
+  line-height: 1.2em;
+  padding: 2rem 0;
+  position: fixed;
+  text-align: center;
   width: 100%;
   z-index: 9999;
-  background: #333;
-  background: rgba(0,0,0,0.8);
-  line-height: 1.2em;
-  color: #eee;
-  text-align: center;
-  padding: 10px 0;
-
-  .Container {
-    padding: 2rem 4rem;
-  }
 
   p {
-    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
   }
 }
 
 .Button--cookies {
   background-color: $main-color;
-  padding: 1rem 2rem;
   border-radius: 20px;
+  padding: 1rem 2rem;
 }

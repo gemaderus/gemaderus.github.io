@@ -1141,26 +1141,25 @@ Icons classes built on sprites or svg. Use the i tag as acronym of icon. Hilario
       margin-right: 0; }
 
 .Cookies-bar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 9999;
-  background: #333;
   background: rgba(0, 0, 0, 0.8);
-  line-height: 1.2em;
+  bottom: 0;
   color: #eee;
+  font-size: 1.4rem;
+  left: 0;
+  line-height: 1.2em;
+  padding: 2rem 0;
+  position: fixed;
   text-align: center;
-  padding: 10px 0; }
-  .Cookies-bar .Container {
-    padding: 2rem 4rem; }
+  width: 100%;
+  z-index: 9999; }
   .Cookies-bar p {
-    margin-bottom: 2rem; }
+    font-size: 1.4rem;
+    margin-bottom: 1rem; }
 
 .Button--cookies {
   background-color: #FB4747;
-  padding: 1rem 2rem;
-  border-radius: 20px; }
+  border-radius: 20px;
+  padding: 1rem 2rem; }
 
 /* 6. Layout */
 .About {
