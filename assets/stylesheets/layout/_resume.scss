@@ -3,7 +3,7 @@
 
   @media (min-width: $tablet) {
     border-bottom: 1px solid #ddd;
-    padding-bottom: 80px;
+    padding-bottom: 3rem;
   }
 }
 
@@ -41,13 +41,14 @@
 }
 
 .Block-one {
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .Blocker {
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
 
   h3 {
     font-size: 26px;
@@ -59,7 +60,6 @@
   }
 
   @media screen and (min-width: $tablet) {
-    flex: 0 0 45%;
 
     &:nth-last-child(-n+2) {
       margin-bottom: 0;
@@ -73,12 +73,11 @@
 
 .Resume-jobs {
   @media (min-width: $tablet) {
-    padding-top: 80px;
+    padding-top: 3rem;
   }
 }
 
 .Block-two {
-  @extend .clearfix;
 
   .Blocker--intro {
     margin-bottom: 20px;
@@ -92,6 +91,10 @@
     display: flex;
     flex-wrap: wrap;
   }
+}
+
+.Project-list {
+  @extend .clearfix;
 }
 
 .Blocker--left {
@@ -116,10 +119,6 @@
   @media print {
     flex: 0 0 45%;
   }
-}
-
-.Blocker--intro {
-  flex: 0 0 100%;
 }
 
 .Blocker--last {

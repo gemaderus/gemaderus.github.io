@@ -428,10 +428,10 @@ Clear floats utility.
 </div>
 
 */
-.clearfix:before, .Grid-content:before, .Block-two:before, .clearfix:after, .Grid-content:after, .Block-two:after {
+.clearfix:before, .Grid-content:before, .Project-list:before, .clearfix:after, .Grid-content:after, .Project-list:after {
   content: '';
   display: table; }
-.clearfix:after, .Grid-content:after, .Block-two:after {
+.clearfix:after, .Grid-content:after, .Project-list:after {
   clear: both; }
 
 /*
@@ -1052,14 +1052,14 @@ Icons classes built on sprites or svg. Use the i tag as acronym of icon. Hilario
   background-position: center center; }
 
 .Projects-intro {
-  margin-bottom: 30px; }
+  margin-bottom: 3rem; }
   .Projects-intro h2 {
-    margin-bottom: 30px; }
+    margin-bottom: 3rem; }
     .Projects-intro h2 a {
       color: #555; }
   @media screen and (min-width: 600px) {
     .Projects-intro {
-      margin-bottom: 80px; } }
+      margin-bottom: 5rem; } }
 
 .Projects-intro-link {
   color: #555;
@@ -1129,6 +1129,9 @@ Icons classes built on sprites or svg. Use the i tag as acronym of icon. Hilario
   height: 57px;
   padding-left: 10px;
   padding-right: 10px; }
+
+.logo-link-populate img {
+  width: 150px; }
 
 .Menu-social {
   align-items: center;
@@ -1220,6 +1223,13 @@ Media object with flexbox
       flex: 50%;
       margin-bottom: 0; } }
 
+.skills-holder {
+  width: 30%; }
+
+.skills {
+  display: flex;
+  justify-content: space-between; }
+
 /* 6. Layout */
 .About {
   text-align: center; }
@@ -1243,7 +1253,7 @@ Media object with flexbox
   @media (min-width: 600px) {
     .Resume-container--inner.has-border {
       border-bottom: 1px solid #ddd;
-      padding-bottom: 80px; } }
+      padding-bottom: 3rem; } }
 
 .Resume-info {
   display: flex;
@@ -1270,29 +1280,28 @@ Media object with flexbox
         color: #555; } }
 
 .Block-one {
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; }
 
 .Blocker {
-  margin-bottom: 30px; }
+  margin-bottom: 2rem; }
   .Blocker h3 {
     font-size: 26px; }
   .Blocker h4 {
     font-size: 20px;
     margin-bottom: 10px; }
   @media screen and (min-width: 600px) {
-    .Blocker {
-      flex: 0 0 45%; }
-      .Blocker:nth-last-child(-n+2) {
-        margin-bottom: 0; } }
+    .Blocker:nth-last-child(-n+2) {
+      margin-bottom: 0; } }
   @media print {
     .Blocker {
       width: 45%; } }
 
 @media (min-width: 600px) {
   .Resume-jobs {
-    padding-top: 80px; } }
+    padding-top: 3rem; } }
 
 .Block-two .Blocker--intro {
   margin-bottom: 20px; }
@@ -1321,9 +1330,6 @@ Media object with flexbox
 @media print {
   .Blocker--right {
     flex: 0 0 45%; } }
-
-.Blocker--intro {
-  flex: 0 0 100%; }
 
 .Blocker--last {
   margin-bottom: 0; }

@@ -29,9 +29,11 @@ closeMenu.addEventListener("click", function() {
 var btnCookies = document.getElementById("btn-cookies");
 var cookiesBar = document.getElementById("cookies-bar");
 
-btnCookies.addEventListener("click", function() {
-  cookiesBar.classList.add('is-hidden');
-});
+if (btnCookies) {
+  btnCookies.addEventListener("click", function() {
+    cookiesBar.classList.add('is-hidden');
+  });
+}
 
 //Polyfill to object fit.
 
