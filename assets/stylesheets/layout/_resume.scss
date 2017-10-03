@@ -28,10 +28,10 @@
     .Intro-content {
       color: $main-color;
       margin-bottom: 31px;
-      text-align: left;
-      max-width: auto;
       margin-left: 0;
+      max-width: auto;
       padding-left: 0;
+      text-align: left;
     }
 
     a {
@@ -126,8 +126,8 @@
 }
 
 .Project-link {
-  font-size: 12px;
   color: $base-color;
+  font-size: 12px;
 
   &:hover {
     text-decoration: underline;

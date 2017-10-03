@@ -931,22 +931,22 @@ Icons classes built on sprites or svg. Use the i tag as acronym of icon. Hilario
   @media screen and (min-width: 800px) {
     .Navigation {
       display: block;
+      flex: 1;
       position: static;
-      width: auto;
-      flex: 1; } }
+      width: auto; } }
   @media screen and (min-width: 800px) {
     .Navigation .Menu-social {
       display: none; } }
 
 .Navigation-items {
+  align-items: center;
   background-color: #FB4747;
   display: flex;
   flex-direction: column;
-  line-height: normal;
-  width: 100%;
-  align-items: center;
+  height: 100%;
   justify-content: center;
-  height: 100%; }
+  line-height: normal;
+  width: 100%; }
   .Navigation-items li {
     transition: background 0.3s ease; }
     .Navigation-items li:last-child {
@@ -973,8 +973,8 @@ Icons classes built on sprites or svg. Use the i tag as acronym of icon. Hilario
   transition: color 0.3s ease;
   width: 100%; }
   .Navigation-link:hover {
-    overflow-x: hidden;
     box-shadow: 0 1px 0 0 #ffffff;
+    overflow-x: hidden;
     text-decoration: none; }
   @media screen and (min-width: 800px) {
     .Navigation-link {
@@ -1043,13 +1043,13 @@ Icons classes built on sprites or svg. Use the i tag as acronym of icon. Hilario
       top: 10px; } }
 
 .objectfit {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
+  background-position: center center;
   background-size: cover;
-  background-position: center center; }
+  bottom: 10px;
+  left: 10px;
+  position: absolute;
+  right: 10px;
+  top: 10px; }
 
 .Projects-intro {
   margin-bottom: 3rem; }
@@ -1100,14 +1100,14 @@ Icons classes built on sprites or svg. Use the i tag as acronym of icon. Hilario
   padding-top: 0; }
 
 .Logos {
+  align-items: center;
   display: flex;
-  flex-direction: column;
-  align-items: center; }
+  flex-direction: column; }
   @media screen and (min-width: 600px) {
     .Logos {
-      justify-content: space-around;
+      flex-direction: row;
       flex-wrap: wrap;
-      flex-direction: row; } }
+      justify-content: space-around; } }
 
 .Logo-image {
   display: block;
@@ -1192,8 +1192,8 @@ Media object with flexbox
 
 .Media-image {
   background-position: center;
-  background-size: contain;
   background-repeat: no-repeat;
+  background-size: contain;
   height: 30rem;
   width: 100%; }
   @media screen and (min-width: 800px) {
@@ -1214,21 +1214,14 @@ Media object with flexbox
   background-image: url(../images/calculator.jpg); }
 
 .Media-body {
-  width: 100%;
-  margin-bottom: 3rem; }
+  margin-bottom: 3rem;
+  width: 100%; }
   .Media-body h3 {
     margin-bottom: 2rem; }
   @media screen and (min-width: 800px) {
     .Media-body {
       flex: 50%;
       margin-bottom: 0; } }
-
-.skills-holder {
-  width: 30%; }
-
-.skills {
-  display: flex;
-  justify-content: space-between; }
 
 /* 6. Layout */
 .About {
@@ -1242,8 +1235,8 @@ Media object with flexbox
   font-size: 20px; }
 
 .Lead {
-  margin-bottom: 30px;
-  font-size: 30px; }
+  font-size: 30px;
+  margin-bottom: 30px; }
 
 .Resume-link a {
   font-size: 20px; }
@@ -1272,10 +1265,10 @@ Media object with flexbox
       .Intro--resume .Intro-content {
         color: #FB4747;
         margin-bottom: 31px;
-        text-align: left;
-        max-width: auto;
         margin-left: 0;
-        padding-left: 0; }
+        max-width: auto;
+        padding-left: 0;
+        text-align: left; }
       .Intro--resume a {
         color: #555; } }
 
@@ -1335,8 +1328,8 @@ Media object with flexbox
   margin-bottom: 0; }
 
 .Project-link {
-  font-size: 12px;
-  color: #555; }
+  color: #555;
+  font-size: 12px; }
   .Project-link:hover {
     text-decoration: underline; }
   @media print {

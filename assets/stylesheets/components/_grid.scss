@@ -1,7 +1,7 @@
 .Grid-content {
-  @extend .clearfix;
   margin-left: -10px;
   margin-right: -10px;
+  @extend .clearfix;
 }
 
 .Grid-item {
@@ -78,11 +78,11 @@
 }
 
 .objectfit {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-  background-size: cover;
   background-position: center center;
+  background-size: cover;
+  bottom: 10px;
+  left: 10px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }

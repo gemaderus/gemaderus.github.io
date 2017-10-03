@@ -2,10 +2,6 @@
   background-color: $main-color;
   position: relative;
 
-  // @media screen and (min-width: $desktop) {
-  //   border-bottom: 0;
-  // }
-
   @media print {
     display: none;
   }
