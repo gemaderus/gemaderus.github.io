@@ -12,6 +12,10 @@ Media object with flexbox
   flex-direction: column;
   margin-bottom: 3rem;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   @media screen and (min-width: $desktop) {
     align-items: center;
     flex-direction: row;
@@ -36,12 +40,14 @@ Media object with flexbox
 .Media-image {
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
-  height: 30rem;
+  background-size: cover;
+  height: 20rem;
   width: 100%;
 
   @media screen and (min-width: $desktop) {
+    background-size: contain;
     flex: 50%;
+    height: 30rem;
     margin-left: 3rem;
   }
 }

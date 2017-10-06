@@ -2,8 +2,15 @@
   background-color: $main-color;
   position: relative;
 
+
   @media print {
     display: none;
+  }
+
+  @media screen and (min-width: $desktop) {
+    .Container {
+      display: flex;
+    }
   }
 }
 
@@ -67,7 +74,7 @@
   }
 
   .Menu-social {
-    padding: 50px;
+    margin-bottom: 0;
   }
 
   .Button--close {
@@ -79,4 +86,12 @@
   .Button--open {
     display: none;
   }
+}
+
+.is-open.Header {
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  right: 0;
+  z-index: 100;
 }

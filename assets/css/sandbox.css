@@ -690,8 +690,8 @@ html {
   line-height: 1.5; }
 
 html, body {
-  height: 100%;
-  color: #555; }
+  color: #555;
+  height: 100%; }
 
 body {
   font-size: 1.6rem; }
@@ -761,9 +761,9 @@ Reset default styles on paragraphs.
 
 */
 p {
-  margin: 0;
   font-size: 1.6rem;
-  line-height: 1.5; }
+  line-height: 1.5;
+  margin: 0; }
 
 /* 5. Components */
 .Avatar {
@@ -876,6 +876,9 @@ Icons classes built on sprites or svg. Use the i tag as acronym of icon. Hilario
   @media print {
     .Header {
       display: none; } }
+  @media screen and (min-width: 800px) {
+    .Header .Container {
+      display: flex; } }
 
 .Main-logo {
   text-align: center; }
@@ -913,21 +916,24 @@ Icons classes built on sprites or svg. Use the i tag as acronym of icon. Hilario
     .is-open .Navigation {
       height: calc(100vh - 226px); } }
 .is-open .Menu-social {
-  padding: 50px; }
+  margin-bottom: 0; }
 @media screen and (min-width: 800px) {
   .is-open .Button--close {
     display: none; } }
 .is-open .Button--open {
   display: none; }
 
+.is-open.Header {
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  right: 0;
+  z-index: 100; }
+
 .Navigation {
   background-color: #FB4747;
   display: none;
-  left: 0;
-  position: absolute;
-  top: 100%;
-  width: 100%;
-  z-index: 10; }
+  width: 100%; }
   @media screen and (min-width: 800px) {
     .Navigation {
       display: block;
@@ -953,6 +959,7 @@ Icons classes built on sprites or svg. Use the i tag as acronym of icon. Hilario
       margin-right: 0; }
   @media screen and (min-width: 800px) {
     .Navigation-items {
+      align-items: flex-start;
       flex-direction: row;
       justify-content: flex-end;
       padding: 0; }
@@ -1150,7 +1157,7 @@ Icons classes built on sprites or svg. Use the i tag as acronym of icon. Hilario
   font-size: 1.4rem;
   left: 0;
   line-height: 1.2em;
-  padding: 2rem 0;
+  padding: 2rem 3rem;
   position: fixed;
   text-align: center;
   width: 100%;
@@ -1176,6 +1183,8 @@ Media object with flexbox
   display: flex;
   flex-direction: column;
   margin-bottom: 3rem; }
+  .Media:last-child {
+    margin-bottom: 0; }
   @media screen and (min-width: 800px) {
     .Media {
       align-items: center;
@@ -1193,12 +1202,14 @@ Media object with flexbox
 .Media-image {
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
-  height: 30rem;
+  background-size: cover;
+  height: 20rem;
   width: 100%; }
   @media screen and (min-width: 800px) {
     .Media-image {
+      background-size: contain;
       flex: 50%;
+      height: 30rem;
       margin-left: 3rem; } }
 
 .Media-image--wikipedia {
