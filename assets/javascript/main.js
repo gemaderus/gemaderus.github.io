@@ -28,13 +28,15 @@ closeMenu.addEventListener("click", function() {
 
 var btnCookies = document.getElementById("btn-cookies");
 var cookiesBar = document.getElementById("cookies-bar");
-var status = window.localStorage.getItem('gemaderus.com');
+var localStorage = window.localStorage;
+var status = localStorage.getItem('gemaderus.com');
 
-if (!status) {
+if (status !== 'true') {
   cookiesBar.classList.remove('is-hidden');
-  
+
   if (btnCookies) {
     btnCookies.addEventListener("click", function() {
+      localStorage.setItem('gemaderus.com', 'true');
       cookiesBar.classList.add('is-hidden');
     });
   }

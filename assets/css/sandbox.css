@@ -694,6 +694,8 @@ html, body {
   height: 100%; }
 
 body {
+  display: flex;
+  flex-direction: column;
   font-size: 1.6rem; }
 
 /*
@@ -803,6 +805,7 @@ Base button to normalize behaviour. It renders the same for links, buttons or in
   text-decoration: none; }
 
 .Container {
+  flex: 1;
   margin: auto;
   max-width: 1160px;
   padding: 30px 20px; }
