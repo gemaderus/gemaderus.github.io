@@ -10,35 +10,156 @@
 .Resume-info {
   display: flex;
   flex-direction: column;
-  font-size: 20px;
+  font-size: 2rem;
   margin: auto;
 }
 
 .Intro--resume {
-  display: none;
+
+  // display: none;
 
   .Container {
     padding-top: 30px;
   }
 
+  .Intro-content {
+
+      // margin-bottom: 31px;
+      margin: 0;
+      // max-width: auto;
+
+      text-align: left;
+
+      h2 {
+        color: $main-color;
+      }
+
+      span {
+        color: #555;
+      }
+
+    }
   @media print {
     background-color: transparent;
     display: block;
 
-    .Intro-content {
-      color: $main-color;
-      margin-bottom: 31px;
-      margin-left: 0;
-      max-width: auto;
-      padding-left: 0;
-      text-align: left;
-    }
+    // .Intro-content {
+    //   color: $main-color;
+    //   margin-bottom: 31px;
+    //   margin-left: 0;
+    //   max-width: auto;
+    //   padding-left: 0;
+    //   text-align: left;
+    // }
 
     a {
       color: $base-color;
     }
   }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
+
+.skills {
+  background-color: $main-color;
+  color: $white;
+  padding: 2rem 4rem;
+  border-radius: 8px;
+}
+
+.timeline {
+  display: flex;
+  position: relative;
+  width: 8px;
+  background-color: $main-color;
+  border-radius: 6px;
+}
+
+// .timeline:before {
+//   content: '';
+//   display: block;
+//   height: 600px;
+
+// }
+
+.works {
+  padding-bottom: 4rem;
+
+  h3 {
+    margin-bottom: 4rem;
+  }
+}
+
+.timeline-holder {
+  display: flex;
+  position: relative;
+}
+
+.timeline--item {
+  margin-left: 2rem;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+
+  h4 {
+    font-size: 1.8rem;
+  }
+
+  h3, h4 {
+    line-height: 1;
+  }
+
+  h3, h4 {
+    margin-bottom: 6px;
+  }
+
+  p {
+    margin-bottom: 3px;
+  }
+
+  p {
+    font-size: 1.4rem;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.timeline--item:before {
+  display: inline-block;
+  content: '';
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: $main-color;
+  position: absolute;
+
+}
+
+.timeline-left.timeline--item:before {
+  left: -4px;
+}
+
+.timeline-right.timeline--item:before {
+  right: -4px;
+}
+
+.Project-link-resume {
+  display: flex;
+  align-items: center;
+}
+
+.Resume--main-content {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 
 .Block-one {
   align-items: center;
@@ -55,7 +176,7 @@
   }
 
   h4 {
-    font-size: 20px;
+    font-size: 2rem;
     margin-bottom: 10px;
   }
 
@@ -80,7 +201,7 @@
 .Block-two {
 
   .Blocker--intro {
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 
     @media (min-width: $tablet) {
       margin-bottom: 30px;
