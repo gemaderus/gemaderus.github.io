@@ -1255,6 +1255,15 @@ Media object with flexbox
 .Resume-link a {
   font-size: 20px; }
 
+.Resume .Title {
+  margin-bottom: 2rem; }
+
+.contact-item a:hover {
+  text-decoration: none; }
+
+.contact-item-mail {
+  color: #FB4747; }
+
 .Resume-container--inner.has-border {
   padding-bottom: 30px; }
   @media (min-width: 600px) {
@@ -1268,26 +1277,30 @@ Media object with flexbox
   font-size: 2rem;
   margin: auto; }
 
-.Intro--resume .Container {
-  padding-top: 30px; }
-.Intro--resume .Intro-content {
-  margin: 0;
-  text-align: left; }
-  .Intro--resume .Intro-content h2 {
-    color: #FB4747; }
-  .Intro--resume .Intro-content span {
-    color: #555; }
-@media print {
-  .Intro--resume {
-    background-color: transparent;
-    display: block; }
-    .Intro--resume a {
-      color: #555; } }
-@media screen and (min-width: 600px) {
-  .Intro--resume {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; } }
+.contact-item {
+  border: 1px solid #ddd;
+  padding: 2rem 1rem;
+  margin-bottom: 2rem; }
+  .contact-item svg {
+    vertical-align: middle;
+    margin-right: 2rem; }
+
+.Intro--resume {
+  margin-bottom: 4rem; }
+  .Intro--resume .Container {
+    padding-top: 30px; }
+  .Intro--resume .Intro-content {
+    margin: 0;
+    text-align: left; }
+    .Intro--resume .Intro-content h2 {
+      color: #FB4747; }
+    .Intro--resume .Intro-content span {
+      color: #555; }
+  @media screen and (min-width: 600px) {
+    .Intro--resume {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; } }
 
 .skills {
   background-color: #FB4747;
@@ -1328,6 +1341,9 @@ Media object with flexbox
   .timeline--item:last-child {
     margin-bottom: 0; }
 
+.graphic {
+  width: 200px; }
+
 .timeline--item:before {
   display: inline-block;
   content: '';
@@ -1351,6 +1367,12 @@ Media object with flexbox
   .Resume--main-content {
     display: flex;
     justify-content: space-between; } }
+
+.Project-link {
+  color: #555;
+  font-size: 12px; }
+  .Project-link:hover {
+    text-decoration: underline; }
 
 .Block-one {
   align-items: center;
@@ -1406,14 +1428,5 @@ Media object with flexbox
 
 .Blocker--last {
   margin-bottom: 0; }
-
-.Project-link {
-  color: #555;
-  font-size: 12px; }
-  .Project-link:hover {
-    text-decoration: underline; }
-  @media print {
-    .Project-link {
-      display: none; } }
 
 /*# sourceMappingURL=sandbox.css.map */

@@ -1,3 +1,18 @@
+.Resume {
+  .Title {
+    margin-bottom: 2rem;
+  }
+}
+
+.contact-item a:hover {
+  text-decoration: none;
+}
+
+.contact-item-mail {
+  color: #FB4747;
+}
+
+
 .Resume-container--inner.has-border {
   padding-bottom: 30px;
 
@@ -14,9 +29,19 @@
   margin: auto;
 }
 
-.Intro--resume {
+.contact-item {
+  border: 1px solid #ddd;
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
 
-  // display: none;
+  svg {
+    vertical-align: middle;
+    margin-right: 2rem;
+  }
+}
+
+.Intro--resume {
+  margin-bottom: 4rem;
 
   .Container {
     padding-top: 30px;
@@ -39,23 +64,23 @@
       }
 
     }
-  @media print {
-    background-color: transparent;
-    display: block;
+  // @media print {
+  //   background-color: transparent;
+  //   display: block;
 
-    // .Intro-content {
-    //   color: $main-color;
-    //   margin-bottom: 31px;
-    //   margin-left: 0;
-    //   max-width: auto;
-    //   padding-left: 0;
-    //   text-align: left;
-    // }
+  //   // .Intro-content {
+  //   //   color: $main-color;
+  //   //   margin-bottom: 31px;
+  //   //   margin-left: 0;
+  //   //   max-width: auto;
+  //   //   padding-left: 0;
+  //   //   text-align: left;
+  //   // }
 
-    a {
-      color: $base-color;
-    }
-  }
+  //   a {
+  //     color: $base-color;
+  //   }
+  // }
 
   @media screen and (min-width: $tablet) {
     display: flex;
@@ -78,13 +103,6 @@
   background-color: $main-color;
   border-radius: 6px;
 }
-
-// .timeline:before {
-//   content: '';
-//   display: block;
-//   height: 600px;
-
-// }
 
 .works {
   padding-bottom: 4rem;
@@ -129,6 +147,10 @@
   }
 }
 
+.graphic {
+  width: 200px;
+}
+
 .timeline--item:before {
   display: inline-block;
   content: '';
@@ -157,6 +179,15 @@
   @media screen and (min-width: $tablet) {
     display: flex;
     justify-content: space-between;
+  }
+}
+
+.Project-link {
+  color: $base-color;
+  font-size: 12px;
+
+  &:hover {
+    text-decoration: underline;
   }
 }
 
@@ -246,15 +277,15 @@
   margin-bottom: 0;
 }
 
-.Project-link {
-  color: $base-color;
-  font-size: 12px;
+// .Project-link {
+//   color: $base-color;
+//   font-size: 12px;
 
-  &:hover {
-    text-decoration: underline;
-  }
+//   &:hover {
+//     text-decoration: underline;
+//   }
 
-  @media print {
-    display: none;
-  }
-}
+//   @media print {
+//     display: none;
+//   }
+// }
