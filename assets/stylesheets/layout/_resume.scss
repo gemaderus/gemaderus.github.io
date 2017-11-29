@@ -1,6 +1,10 @@
 .Resume {
   .Title {
     margin-bottom: 2rem;
+
+    @media (min-width: $tablet) {
+      text-align: right;
+    }
   }
 }
 
@@ -12,6 +16,12 @@
   color: #FB4747;
 }
 
+.Resume--main-content {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 
 .Resume-container--inner.has-border {
   padding-bottom: 30px;
@@ -29,17 +39,6 @@
   margin: auto;
 }
 
-.contact-item {
-  border: 1px solid #ddd;
-  padding: 2rem 1rem;
-  margin-bottom: 2rem;
-
-  svg {
-    vertical-align: middle;
-    margin-right: 2rem;
-  }
-}
-
 .Intro--resume {
   margin-bottom: 4rem;
 
@@ -48,39 +47,18 @@
   }
 
   .Intro-content {
+    margin: 0;
+    text-align: left;
 
-      // margin-bottom: 31px;
-      margin: 0;
-      // max-width: auto;
-
-      text-align: left;
-
-      h2 {
-        color: $main-color;
-      }
-
-      span {
-        color: #555;
-      }
-
+    h2 {
+      color: $main-color;
     }
-  // @media print {
-  //   background-color: transparent;
-  //   display: block;
 
-  //   // .Intro-content {
-  //   //   color: $main-color;
-  //   //   margin-bottom: 31px;
-  //   //   margin-left: 0;
-  //   //   max-width: auto;
-  //   //   padding-left: 0;
-  //   //   text-align: left;
-  //   // }
+    span {
+      color: #555;
+    }
 
-  //   a {
-  //     color: $base-color;
-  //   }
-  // }
+  }
 
   @media screen and (min-width: $tablet) {
     display: flex;
@@ -89,12 +67,21 @@
   }
 }
 
-.skills {
-  background-color: $main-color;
-  color: $white;
-  padding: 2rem 4rem;
-  border-radius: 8px;
+.Project-link-resume {
+  display: flex;
+  align-items: center;
 }
+
+.Project-link {
+  color: $base-color;
+  font-size: 12px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+//Timeline
 
 .timeline {
   display: flex;
@@ -104,11 +91,13 @@
   border-radius: 6px;
 }
 
-.works {
-  padding-bottom: 4rem;
+.timeline--inverse {
+  flex: 1;
+  text-align: right;
 
-  h3 {
-    margin-bottom: 4rem;
+  li {
+    margin-left: 0;
+    margin-right: 20px;
   }
 }
 
@@ -147,10 +136,6 @@
   }
 }
 
-.graphic {
-  width: 200px;
-}
-
 .timeline--item:before {
   display: inline-block;
   content: '';
@@ -170,122 +155,52 @@
   right: -4px;
 }
 
-.Project-link-resume {
-  display: flex;
-  align-items: center;
-}
-
-.Resume--main-content {
-  @media screen and (min-width: $tablet) {
-    display: flex;
-    justify-content: space-between;
-  }
-}
-
-.Project-link {
-  color: $base-color;
-  font-size: 12px;
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
-
-.Block-one {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.Blocker {
-  margin-bottom: 2rem;
+.works {
+  padding-bottom: 4rem;
 
   h3 {
-    font-size: 26px;
-  }
-
-  h4 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-  }
-
-  @media screen and (min-width: $tablet) {
-
-    &:nth-last-child(-n+2) {
-      margin-bottom: 0;
-    }
-  }
-
-  @media print {
-    width: 45%;
+    margin-bottom: 4rem;
   }
 }
 
-.Resume-jobs {
-  @media (min-width: $tablet) {
-    padding-top: 3rem;
+//Skills
+
+.skills {
+  color: #FB4747;
+  padding: 2rem 4rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+// .graphic {
+//   width: 400px;
+// }
+
+//Contact
+.contact-item {
+  border: 1px solid #ddd;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+
+  svg {
+    vertical-align: middle;
+    margin-right: 2rem;
   }
 }
 
-.Block-two {
-
-  .Blocker--intro {
-    margin-bottom: 2rem;
-
-    @media (min-width: $tablet) {
-      margin-bottom: 30px;
-    }
-  }
-
-  @media print {
-    display: flex;
-    flex-wrap: wrap;
+.contact-list {
+  @include min-screen($tablet) {
+    max-width: 300px;
+    margin-left: auto;
   }
 }
 
-.Project-list {
-  @extend .clearfix;
-}
 
-.Blocker--left {
-  @media (min-width: $tablet) {
-    float: left;
-    margin-right: 10%;
-    width: 45%;
-  }
 
-  @media print {
-    flex: 0 0 45%;
-    margin-right: 10%;
-  }
-}
 
-.Blocker--right {
-  @media (min-width: $tablet) {
-    float: right;
-    width: 45%;
-  }
-
-  @media print {
-    flex: 0 0 45%;
-  }
-}
-
-.Blocker--last {
-  margin-bottom: 0;
-}
-
-// .Project-link {
-//   color: $base-color;
-//   font-size: 12px;
-
-//   &:hover {
-//     text-decoration: underline;
-//   }
-
-//   @media print {
-//     display: none;
+// .Resume-jobs {
+//   @media (min-width: $tablet) {
+//     padding-top: 3rem;
 //   }
 // }

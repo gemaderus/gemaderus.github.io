@@ -428,10 +428,10 @@ Clear floats utility.
 </div>
 
 */
-.clearfix:before, .Grid-content:before, .Project-list:before, .clearfix:after, .Grid-content:after, .Project-list:after {
+.clearfix:before, .Grid-content:before, .clearfix:after, .Grid-content:after {
   content: '';
   display: table; }
-.clearfix:after, .Grid-content:after, .Project-list:after {
+.clearfix:after, .Grid-content:after {
   clear: both; }
 
 /*
@@ -1257,12 +1257,20 @@ Media object with flexbox
 
 .Resume .Title {
   margin-bottom: 2rem; }
+  @media (min-width: 600px) {
+    .Resume .Title {
+      text-align: right; } }
 
 .contact-item a:hover {
   text-decoration: none; }
 
 .contact-item-mail {
   color: #FB4747; }
+
+@media screen and (min-width: 600px) {
+  .Resume--main-content {
+    display: flex;
+    justify-content: space-between; } }
 
 .Resume-container--inner.has-border {
   padding-bottom: 30px; }
@@ -1276,14 +1284,6 @@ Media object with flexbox
   flex-direction: column;
   font-size: 2rem;
   margin: auto; }
-
-.contact-item {
-  border: 1px solid #ddd;
-  padding: 2rem 1rem;
-  margin-bottom: 2rem; }
-  .contact-item svg {
-    vertical-align: middle;
-    margin-right: 2rem; }
 
 .Intro--resume {
   margin-bottom: 4rem; }
@@ -1302,11 +1302,15 @@ Media object with flexbox
       justify-content: space-between;
       align-items: center; } }
 
-.skills {
-  background-color: #FB4747;
-  color: #ffffff;
-  padding: 2rem 4rem;
-  border-radius: 8px; }
+.Project-link-resume {
+  display: flex;
+  align-items: center; }
+
+.Project-link {
+  color: #555;
+  font-size: 12px; }
+  .Project-link:hover {
+    text-decoration: underline; }
 
 .timeline {
   display: flex;
@@ -1315,10 +1319,12 @@ Media object with flexbox
   background-color: #FB4747;
   border-radius: 6px; }
 
-.works {
-  padding-bottom: 4rem; }
-  .works h3 {
-    margin-bottom: 4rem; }
+.timeline--inverse {
+  flex: 1;
+  text-align: right; }
+  .timeline--inverse li {
+    margin-left: 0;
+    margin-right: 20px; }
 
 .timeline-holder {
   display: flex;
@@ -1341,9 +1347,6 @@ Media object with flexbox
   .timeline--item:last-child {
     margin-bottom: 0; }
 
-.graphic {
-  width: 200px; }
-
 .timeline--item:before {
   display: inline-block;
   content: '';
@@ -1359,74 +1362,29 @@ Media object with flexbox
 .timeline-right.timeline--item:before {
   right: -4px; }
 
-.Project-link-resume {
-  display: flex;
-  align-items: center; }
+.works {
+  padding-bottom: 4rem; }
+  .works h3 {
+    margin-bottom: 4rem; }
+
+.skills {
+  color: #FB4747;
+  padding: 2rem 4rem;
+  border-radius: 8px;
+  border: 1px solid #ddd; }
+
+.contact-item {
+  border: 1px solid #ddd;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 8px; }
+  .contact-item svg {
+    vertical-align: middle;
+    margin-right: 2rem; }
 
 @media screen and (min-width: 600px) {
-  .Resume--main-content {
-    display: flex;
-    justify-content: space-between; } }
-
-.Project-link {
-  color: #555;
-  font-size: 12px; }
-  .Project-link:hover {
-    text-decoration: underline; }
-
-.Block-one {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; }
-
-.Blocker {
-  margin-bottom: 2rem; }
-  .Blocker h3 {
-    font-size: 26px; }
-  .Blocker h4 {
-    font-size: 2rem;
-    margin-bottom: 10px; }
-  @media screen and (min-width: 600px) {
-    .Blocker:nth-last-child(-n+2) {
-      margin-bottom: 0; } }
-  @media print {
-    .Blocker {
-      width: 45%; } }
-
-@media (min-width: 600px) {
-  .Resume-jobs {
-    padding-top: 3rem; } }
-
-.Block-two .Blocker--intro {
-  margin-bottom: 2rem; }
-  @media (min-width: 600px) {
-    .Block-two .Blocker--intro {
-      margin-bottom: 30px; } }
-@media print {
-  .Block-two {
-    display: flex;
-    flex-wrap: wrap; } }
-
-@media (min-width: 600px) {
-  .Blocker--left {
-    float: left;
-    margin-right: 10%;
-    width: 45%; } }
-@media print {
-  .Blocker--left {
-    flex: 0 0 45%;
-    margin-right: 10%; } }
-
-@media (min-width: 600px) {
-  .Blocker--right {
-    float: right;
-    width: 45%; } }
-@media print {
-  .Blocker--right {
-    flex: 0 0 45%; } }
-
-.Blocker--last {
-  margin-bottom: 0; }
+  .contact-list {
+    max-width: 300px;
+    margin-left: auto; } }
 
 /*# sourceMappingURL=sandbox.css.map */
