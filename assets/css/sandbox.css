@@ -514,6 +514,9 @@ n           Negative (margin only)
 .mb1 {
   margin-bottom: 1rem; }
 
+.mb-xs {
+  margin-bottom: 0.5rem; }
+
 .ml1 {
   margin-left: 1rem; }
 
@@ -1255,12 +1258,6 @@ Media object with flexbox
 .Resume-link a {
   font-size: 20px; }
 
-.Resume .Title {
-  margin-bottom: 2rem; }
-  @media (min-width: 600px) {
-    .Resume .Title {
-      text-align: right; } }
-
 .contact-item a:hover {
   text-decoration: none; }
 
@@ -1272,12 +1269,11 @@ Media object with flexbox
     display: flex;
     justify-content: space-between; } }
 
-.Resume-container--inner.has-border {
-  padding-bottom: 30px; }
-  @media (min-width: 600px) {
-    .Resume-container--inner.has-border {
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 3rem; } }
+.intro-me, .role {
+  margin-bottom: 1rem; }
+  @media screen and (min-width: 600px) {
+    .intro-me, .role {
+      margin-bottom: 0; } }
 
 .Resume-info {
   display: flex;
@@ -1320,11 +1316,11 @@ Media object with flexbox
   border-radius: 6px; }
 
 .timeline--inverse {
-  flex: 1;
-  text-align: right; }
-  .timeline--inverse li {
-    margin-left: 0;
-    margin-right: 20px; }
+  flex: 1; }
+  @media screen and (min-width: 600px) {
+    .timeline--inverse li {
+      margin-left: 0;
+      margin-right: 20px; } }
 
 .timeline-holder {
   display: flex;
@@ -1356,11 +1352,14 @@ Media object with flexbox
   background-color: #FB4747;
   position: absolute; }
 
-.timeline-left.timeline--item:before {
-  left: -4px; }
+.content-left {
+  margin-bottom: 2rem; }
+  @media screen and (min-width: 600px) {
+    .content-left {
+      margin-bottom: 0; } }
 
-.timeline-right.timeline--item:before {
-  right: -4px; }
+.timeline--item:before {
+  left: -4px; }
 
 .works {
   padding-bottom: 4rem; }
@@ -1368,23 +1367,39 @@ Media object with flexbox
     margin-bottom: 4rem; }
 
 .skills {
-  color: #FB4747;
-  padding: 2rem 4rem;
-  border-radius: 8px;
-  border: 1px solid #ddd; }
+  color: #FB4747; }
 
 .contact-item {
-  border: 1px solid #ddd;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  border-radius: 8px; }
+  margin-bottom: 0.5rem; }
   .contact-item svg {
     vertical-align: middle;
-    margin-right: 2rem; }
+    margin-right: 0.5rem; }
 
 @media screen and (min-width: 600px) {
   .contact-list {
     max-width: 300px;
     margin-left: auto; } }
+
+@media screen and (min-width: 600px) {
+  .content-right {
+    text-align: right; }
+    .content-right .timeline {
+      order: 2; } }
+
+@media screen and (min-width: 600px) {
+  .content-right .timeline--item:before {
+    right: -4px;
+    left: auto; } }
+
+.Intro-content-about {
+  max-width: 100%; }
+
+.Contacts li {
+  margin-bottom: 4rem;
+  font-size: 20px; }
+  .Contacts li a, .Contacts li svg {
+    vertical-align: middle; }
+  .Contacts li svg {
+    margin-right: 1rem; }
 
 /*# sourceMappingURL=sandbox.css.map */
